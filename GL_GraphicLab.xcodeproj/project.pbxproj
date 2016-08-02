@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		228F94271D50E99A0038AC61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 228F94261D50E99A0038AC61 /* main.m */; };
 		228F942A1D50E99A0038AC61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 228F94291D50E99A0038AC61 /* AppDelegate.m */; };
-		228F942C1D50E99A0038AC61 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 228F942B1D50E99A0038AC61 /* Shader.fsh */; };
-		228F942E1D50E99A0038AC61 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 228F942D1D50E99A0038AC61 /* Shader.vsh */; };
 		228F94311D50E99A0038AC61 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228F94301D50E99A0038AC61 /* GameViewController.m */; };
 		228F94341D50E99A0038AC61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228F94321D50E99A0038AC61 /* Main.storyboard */; };
 		228F94361D50E99A0038AC61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228F94351D50E99A0038AC61 /* Assets.xcassets */; };
 		228F94391D50E99A0038AC61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228F94371D50E99A0038AC61 /* LaunchScreen.storyboard */; };
+		228F94481D50EA320038AC61 /* esInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 228F94411D50EA320038AC61 /* esInterface.cpp */; };
+		228F94491D50EA320038AC61 /* esMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 228F94431D50EA320038AC61 /* esMain.cpp */; };
+		228F944A1D50EA320038AC61 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 228F94461D50EA320038AC61 /* Scene.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,14 +23,18 @@
 		228F94261D50E99A0038AC61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		228F94281D50E99A0038AC61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		228F94291D50E99A0038AC61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		228F942B1D50E99A0038AC61 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
-		228F942D1D50E99A0038AC61 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
 		228F942F1D50E99A0038AC61 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		228F94301D50E99A0038AC61 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		228F94331D50E99A0038AC61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		228F94351D50E99A0038AC61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		228F94381D50E99A0038AC61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		228F943A1D50E99A0038AC61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		228F94411D50EA320038AC61 /* esInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = esInterface.cpp; path = src/esInterface.cpp; sourceTree = "<group>"; };
+		228F94421D50EA320038AC61 /* esInterface.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = esInterface.hpp; path = src/esInterface.hpp; sourceTree = "<group>"; };
+		228F94431D50EA320038AC61 /* esMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = esMain.cpp; path = src/esMain.cpp; sourceTree = "<group>"; };
+		228F94441D50EA320038AC61 /* esUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = esUtil.h; path = src/esUtil.h; sourceTree = "<group>"; };
+		228F94461D50EA320038AC61 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		228F94471D50EA320038AC61 /* Scene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +67,9 @@
 		228F94241D50E99A0038AC61 /* GL_GraphicLab */ = {
 			isa = PBXGroup;
 			children = (
+				228F94401D50EA090038AC61 /* src */,
 				228F94281D50E99A0038AC61 /* AppDelegate.h */,
 				228F94291D50E99A0038AC61 /* AppDelegate.m */,
-				228F942B1D50E99A0038AC61 /* Shader.fsh */,
-				228F942D1D50E99A0038AC61 /* Shader.vsh */,
 				228F942F1D50E99A0038AC61 /* GameViewController.h */,
 				228F94301D50E99A0038AC61 /* GameViewController.m */,
 				228F94321D50E99A0038AC61 /* Main.storyboard */,
@@ -83,6 +87,28 @@
 				228F94261D50E99A0038AC61 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		228F94401D50EA090038AC61 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				228F94411D50EA320038AC61 /* esInterface.cpp */,
+				228F94421D50EA320038AC61 /* esInterface.hpp */,
+				228F94431D50EA320038AC61 /* esMain.cpp */,
+				228F94441D50EA320038AC61 /* esUtil.h */,
+				228F94451D50EA320038AC61 /* Scene */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		228F94451D50EA320038AC61 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				228F94461D50EA320038AC61 /* Scene.cpp */,
+				228F94471D50EA320038AC61 /* Scene.hpp */,
+			);
+			name = Scene;
+			path = src/Scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				228F94341D50E99A0038AC61 /* Main.storyboard in Resources */,
-				228F942E1D50E99A0038AC61 /* Shader.vsh in Resources */,
 				228F94361D50E99A0038AC61 /* Assets.xcassets in Resources */,
 				228F94391D50E99A0038AC61 /* LaunchScreen.storyboard in Resources */,
-				228F942C1D50E99A0038AC61 /* Shader.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +181,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228F944A1D50EA320038AC61 /* Scene.cpp in Sources */,
 				228F942A1D50E99A0038AC61 /* AppDelegate.m in Sources */,
+				228F94491D50EA320038AC61 /* esMain.cpp in Sources */,
+				228F94481D50EA320038AC61 /* esInterface.cpp in Sources */,
 				228F94311D50E99A0038AC61 /* GameViewController.m in Sources */,
 				228F94271D50E99A0038AC61 /* main.m in Sources */,
 			);
