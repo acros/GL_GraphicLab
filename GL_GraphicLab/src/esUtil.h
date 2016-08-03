@@ -117,6 +117,23 @@ struct ESContext
    /// Window height
    GLint       height;
 
+#ifndef __APPLE__
+   /// Display handle
+   EGLNativeDisplayType eglNativeDisplay;
+
+   /// Window handle
+   EGLNativeWindowType  eglNativeWindow;
+
+   /// EGL display
+   EGLDisplay  eglDisplay;
+
+   /// EGL context
+   EGLContext  eglContext;
+
+   /// EGL surface
+   EGLSurface  eglSurface;
+#endif
+
    /// Callbacks
    void ( ESCALLBACK *drawFunc ) ( ESContext * );
    void ( ESCALLBACK *shutdownFunc ) ( ESContext * );

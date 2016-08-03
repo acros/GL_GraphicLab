@@ -10,6 +10,13 @@
 #include "esUtil.h"
 #include "esInterface.hpp"
 
+#ifndef __APPLE__
+
+extern GLboolean ESUTIL_API esCreateWindow(ESContext *esContext, const char *title, GLint width, GLint height, GLuint flags);
+
+#endif
+
+
 EsInterface  gEsInterface;
 
 void shutdown ( ESContext *esContext )
@@ -27,12 +34,17 @@ void update(ESContext* esContext,float delta)
     gEsInterface.update(delta);
 }
 
+
 extern "C"{
 
 int esMain ( ESContext *esContext )
 {
     esContext->userData = malloc ( sizeof ( UserData ) );
-    
+  
+#ifndef __APPLE__
+	esCreateWindow(esContext, "GL_Graphic Lab", esContext->width, esContext->height, ES_WINDOW_RGB);
+#endif
+
     if ( !gEsInterface.initEs( esContext ) )
     {
         return GL_FALSE;

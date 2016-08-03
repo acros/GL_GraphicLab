@@ -36,28 +36,24 @@ int EsInterface::initEs(ESContext *esContext)
     logMessage("OpenGL-ES shader version is : %s.\n",glShaderVer);
     
     UserData *userData = (UserData*)esContext->userData;
-    char vShaderStr[] =
-    "#version 300 es                          \n"
-    "layout(location = 0) in vec4 vPosition;  \n"
-    "layout(location = 1) in vec4 vColor;     \n"
-    "   out vec4 fColor;                           "
-    "void main()                              \n"
-    "{                                        \n"
-    "   gl_Position = vPosition;              \n"
-    "       fColor = vColor;                    "
-    "}                                        \n";
-    
-    char fShaderStr[] =
-    "#version 300 es                              \n"
-    "precision mediump float;                     \n"
-    "in vec4 fColor;                              \n"
-    "out vec4 fragColor;                          \n"
-    "void main()                                  \n"
-    "{                                            \n"
-    //     "fragColor = vec4 ( 1.0, 0.0, 0.0, 1.0 );  \n"
-    "fragColor = fColor;                        \n"
-    "}                                            \n";
-    
+   char vShaderStr[] =
+      "#version 300 es                          \n"
+      "layout(location = 0) in vec4 vPosition;  \n"
+      "void main()                              \n"
+      "{                                        \n"
+      "   gl_Position = vPosition;              \n"
+      "}                                        \n";
+
+   char fShaderStr[] =
+      "#version 300 es                              \n"
+      "precision mediump float;                     \n"
+      "out vec4 fragColor;                          \n"
+      "void main()                                  \n"
+      "{                                            \n"
+      "   fragColor = vec4 ( 1.0, 0.0, 0.0, 1.0 );  \n"
+      "}                                            \n";
+
+
     GLuint vertexShader;
     GLuint fragmentShader;
     GLuint programObject;
@@ -112,7 +108,7 @@ int EsInterface::initEs(ESContext *esContext)
 }
 
 
-GLuint  EsInterface::loadShader ( GLenum type, const char *shaderSrc )
+GLuint  EsInterface::loadShader(GLenum type, const char *shaderSrc)
 {
     GLuint shader;
     GLint compiled;
@@ -200,7 +196,6 @@ void EsInterface::draw ()
     
 }
 
-
 void EsInterface::shutdown ()
 {
     UserData *userData = (UserData*)mContext->userData;
@@ -210,13 +205,14 @@ void EsInterface::shutdown ()
 
 void EsInterface::logMessage ( const char *formatStr, ... )
 {
-    va_list params;
+	va_list params;
     char buf[BUFSIZ];
     
     va_start ( params, formatStr );
-    vsprintf ( buf, formatStr, params );
-    
-    printf ( "%s", buf );
+//	vsprintf(buf, formatStr, params);
+	vsprintf_s(buf, formatStr, params);
+
+	printf ( "%s", buf );
     
     va_end ( params );
 }

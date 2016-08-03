@@ -20,6 +20,8 @@ public:
     
     int initEs(ESContext* esContext);
     
+//	GLboolean ESUTIL_API esCreateWindow(ESContext *esContext, const char *title, GLint width, GLint height, GLuint flags);
+
     void update(float delta);
     
     void draw();

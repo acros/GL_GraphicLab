@@ -1,0 +1,14 @@
+
+
+#visual stuido build
+proj.win32/Debug.win32/*
+proj.win32/*.sdf
+proj.win32/*.suo
+proj.win32/*.opensdf
+
+GL_GraphicLab/GL_GraphicLab.VC.db
+GL_GraphicLab/x64/*
+GL_GraphicLab/Debug/*
+x64/*
+GL_GraphicLab.VC.db
+GL_GraphicLab.VC.VC.opendb
