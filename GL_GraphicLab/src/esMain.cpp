@@ -16,7 +16,6 @@ extern GLboolean ESUTIL_API esCreateWindow(ESContext *esContext, const char *tit
 
 #endif
 
-
 EsInterface  gEsInterface;
 
 void shutdown ( ESContext *esContext )
@@ -35,6 +34,21 @@ void update(ESContext* esContext,float delta)
 }
 
 
+void logMessage(const char *formatStr, ...)
+{
+	va_list params;
+	char buf[BUFSIZ];
+
+	va_start(params, formatStr);
+	//	vsprintf(buf, formatStr, params);
+	vsprintf_s(buf, formatStr, params);
+
+	printf("%s", buf);
+
+	va_end(params);
+}
+
+
 extern "C"{
 
 int esMain ( ESContext *esContext )
@@ -45,7 +59,7 @@ int esMain ( ESContext *esContext )
 	esCreateWindow(esContext, "GL_Graphic Lab", esContext->width, esContext->height, ES_WINDOW_RGB);
 #endif
 
-    if ( !gEsInterface.initEs( esContext ) )
+    if ( !gEsInterface.init( esContext ) )
     {
         return GL_FALSE;
     }

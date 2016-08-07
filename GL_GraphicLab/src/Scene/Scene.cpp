@@ -9,16 +9,21 @@
 #include "Scene.hpp"
 
 
-Scene* Scene::CreateScene(const string& sceneName)
+Scene::Scene(Renderer& render)
+	: mRendererRef(render)
+	, mShaderProgram(0)
 {
-    
-    
-    return nullptr;
+
+}
+
+Scene::~Scene()
+{
+
 }
 
 void Scene::enter()
 {
-    
+	mShaderProgram = mRendererRef.loadShaderProgram(getVertexStr().c_str(), getFragmentStr().c_str());
 }
 
 void Scene::update(float delta)

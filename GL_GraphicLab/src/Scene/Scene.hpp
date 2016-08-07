@@ -11,24 +11,35 @@
 
 #include <stdio.h>
 #include <string>
+#include "esUtil.h"
+#include "Render/Renderer.h"
 
 using namespace std;
 
 class Scene{
 public:
-    static Scene* CreateScene(const string& sceneName);
+	Scene(Renderer&	render);
+	virtual ~Scene();
+
+	const string& getVertexStr()const { return mVertStr; }
+	const string& getFragmentStr()const { return mFragStr; }
+
+    virtual void enter();
     
-    void enter();
+    virtual void update(float delta);
     
-    void update(float delta);
+    virtual void render() = 0;
     
-    void render();
-    
-    void exit();
+    virtual void exit();
     
 protected:
     
-    
+	string	mVertStr;
+	string	mFragStr;
+
+	GLuint	mShaderProgram;
+
+	Renderer&	mRendererRef;
 };
 
 

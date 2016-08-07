@@ -10,6 +10,8 @@
 #define esInterface_hpp
 
 #include "esUtil.h"
+#include "Render/Renderer.h"
+
 class Scene;
 
 class EsInterface{
@@ -18,21 +20,19 @@ public:
     EsInterface();
     ~EsInterface();
     
-    int initEs(ESContext* esContext);
+    int init(ESContext* esContext);
     
-//	GLboolean ESUTIL_API esCreateWindow(ESContext *esContext, const char *title, GLint width, GLint height, GLuint flags);
-
     void update(float delta);
     
     void draw();
     
     void shutdown ();
-    
-    void logMessage ( const char *formatStr, ... );
+
 protected:
-    GLuint loadShader ( GLenum type, const char *shaderSrc );
     
-    ESContext*  mContext;
+	Renderer	mRenderer;
+
+ //   ESContext*  mContext;
     
     Scene* mScene;
 };

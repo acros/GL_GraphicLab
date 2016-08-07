@@ -141,6 +141,8 @@ struct ESContext
    void ( ESCALLBACK *updateFunc ) ( ESContext *, float deltaTime );
 };
     
+void logMessage(const char *formatStr, ...);
+
 
 //
 /// \brief Register an update callback function to be used to update on each time step
