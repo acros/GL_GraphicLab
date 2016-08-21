@@ -1,8 +1,6 @@
 #include "AcObject.h"
 #include "Render/Mesh.h"
 
-AcVector AcVector::ONE = AcVector(1.f,1.f,1.f);
-
 AcObject::~AcObject()
 {
 	if (mMesh != nullptr)
@@ -48,11 +46,20 @@ void AcObject::draw(Renderer& context, const AcMatrix& viewMat,const AcMatrix& p
 	}
 }
 
-void AcObject::createShape()
+void AcObject::createShape(ShapeType	shape)
 {
 	if (mMesh != nullptr)
 		delete mMesh;
 
 	mMesh = new Mesh();
-	mMesh->createCube();
+
+	if (shape == ST_Cube)
+	{
+		mMesh->createCube();
+	}
+	else if (shape == ST_Plane)
+	{
+		mMesh->createPlane();
+	}
+
 }

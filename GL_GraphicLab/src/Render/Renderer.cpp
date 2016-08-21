@@ -85,7 +85,7 @@ GLuint Renderer::loadShaderProgram(const string& vertStr, const string& fragStr)
 void Renderer::beginDraw()
 {
 	// Clear the color buffer
-	glClear(GL_COLOR_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
 void Renderer::draw()

@@ -117,6 +117,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Base\AcObject.cpp" />
+    <ClCompile Include="src\Base\Math.cpp" />
     <ClCompile Include="src\Camera\Camera.cpp" />
     <ClCompile Include="src\esShapes.cpp" />
     <ClCompile Include="src\esTransform.cpp" />

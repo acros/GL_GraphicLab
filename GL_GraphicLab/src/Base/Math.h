@@ -15,3 +15,10 @@ struct AcVector {
 
 	static AcVector	ONE;
 };
+
+//TODO: delete this
+enum ShapeType {
+	ST_None,
+	ST_Cube,
+	ST_Plane
+};

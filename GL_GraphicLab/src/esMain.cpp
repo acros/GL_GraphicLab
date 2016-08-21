@@ -56,7 +56,7 @@ int esMain ( ESContext *esContext )
     esContext->userData = malloc ( sizeof ( UserData ) );
   
 #ifndef __APPLE__
-	esCreateWindow(esContext, "GL_Graphic Lab", esContext->width, esContext->height, ES_WINDOW_RGB);
+	esCreateWindow(esContext, "GL_Graphic Lab", esContext->width, esContext->height, ES_WINDOW_RGB | ES_WINDOW_DEPTH | ES_WINDOW_STENCIL);
 #endif
 
     if ( !gEsInterface.init( esContext ) )

@@ -12,6 +12,7 @@ public:
 	~Mesh();
 
 	void createCube();
+	void createPlane();
 
 	void initDraw(Renderer& context);
 
@@ -19,6 +20,8 @@ public:
 	void draw(Renderer& context,const AcMatrix& mat);
 
 protected:
+	ShapeType	mShape;
+
 	GLuint		mVbo[2];
 
 	GLuint		vertexSize;

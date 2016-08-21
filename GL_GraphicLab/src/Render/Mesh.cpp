@@ -31,11 +31,24 @@ Mesh::~Mesh()
 
 void Mesh::createCube()
 {
+	mShape = ST_Cube;
+
 	//Load the index and init buffer, use VBO here
 	indexSize = esGenCube(1.0f, &vertices, NULL, NULL, &indices);
 
 	//Hack: Cube has 24 vertex
 	vertexSize = 24;
+
+	mMaterial = new Material();
+}
+
+void Mesh::createPlane()
+{
+	mShape = ST_Plane;
+
+	int edgeTrigleNums = 3;
+	indexSize = esGenSquareGrid(edgeTrigleNums, &vertices, &indices);
+	vertexSize = edgeTrigleNums * edgeTrigleNums;
 
 	mMaterial = new Material();
 }
@@ -66,7 +79,13 @@ void Mesh::draw(Renderer& context,const AcMatrix& mat)
 
 	glEnableVertexAttribArray(POSTITION_LOC);	// Pos
 	glVertexAttribPointer(POSTITION_LOC, 3, GL_FLOAT, GL_FALSE, (3 /*+ 2*/) * sizeof(GLfloat), (const void*)NULL);	//Pure position vertex array
-	glVertexAttrib4f(COLOR_LOC, 1.0f, 0.0f, 0.0f, 1.0f);		//Set the color to a Const value
+
+	if (mShape == ST_Cube)
+		glVertexAttrib4f(COLOR_LOC, 1.0f, 0.0f, 0.0f, 1.0f);		//Set the color to a Const value
+	else if (mShape == ST_Plane)
+	{
+		glVertexAttrib4f(COLOR_LOC, 0.7f, 0.7f, 0.7f, 1.0f);	
+	}
 
 	glUniformMatrix4fv(mMaterial->mMvpLoc, 1, GL_FALSE, (GLfloat*)&(mat.m[0][0]));
 

@@ -4,6 +4,7 @@
 #include "Render/Renderer.h"
 #include "Math.h"
 
+
 //The basic object
 class AcObject {
 public:
@@ -30,7 +31,7 @@ public:
 	const class Mesh* getMesh()const { return mMesh; }
 
 	//Debug use
-	void createShape();
+	void createShape(ShapeType	shape);
 
 protected:
 	AcVector	mPos;

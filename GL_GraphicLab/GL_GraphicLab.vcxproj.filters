@@ -67,6 +67,9 @@
     <ClCompile Include="src\Render\Material.cpp">
       <Filter>src\Render</Filter>
     </ClCompile>
+    <ClCompile Include="src\Base\Math.cpp">
+      <Filter>src\Base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\esInterface.hpp">

@@ -35,5 +35,6 @@ protected:
 	Camera*		mCam;
 
 	AcObject*	mCube;
+	AcObject*	mGround;
 
 };

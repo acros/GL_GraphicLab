@@ -7,6 +7,7 @@ FboScene::FboScene(Renderer& renderer)
 // 	, mMvpLoc(-1)
 	, mCam(nullptr)
 	, mCube(nullptr)
+	, mGround(nullptr)
 	, mCameraMoveTime(0.f)
 {
 // 	mVbo[0] = 0;
@@ -31,8 +32,18 @@ void FboScene::enter()
 	mCube->setPosition(AcVector(0.0f, 0.f, -3.0f));
 	mCube->setScale(AcVector(1.0f, 2.5f, 1.0f));
 	mCube->rotate(AcVector(0.0f, 1.0f, 0.0f),-15.f);
-	mCube->createShape();
+	mCube->createShape(ShapeType::ST_Cube);
 	mCube->initDraw(mRendererRef);
+
+
+	// Center the ground
+	mGround = new AcObject();
+	mGround->setPosition(AcVector(-8.0f, -2.f, -8.0f));
+	mGround->setScale(AcVector(10.0f, 10.0f, 10.0f));
+	mGround->rotate(AcVector(1.0f, 0.0f, 0.0f), -90.0f);
+
+	mGround->createShape(ShapeType::ST_Plane);
+	mGround->initDraw(mRendererRef);
 
 }
 
@@ -55,7 +66,14 @@ void FboScene::render()
 {
 	mRendererRef.beginDraw();
 
+	glViewport(0, 0, 800, 600);
+
+	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_CULL_FACE);
+//	glCullFace(GL_BACK);
+
 	mCube->draw(mRendererRef, mCam->getViewMat(), mCam->getProjMat());
+	mGround->draw(mRendererRef, mCam->getViewMat(), mCam->getProjMat());
 
 	mRendererRef.endDraw();
 }
@@ -64,6 +82,7 @@ void FboScene::exit()
 {
 	delete mCam;
 	delete mCube;
+	delete mGround;
 }
 
 void FboScene::renderToTexture()
