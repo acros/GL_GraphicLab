@@ -177,14 +177,17 @@ void FboScene::render()
 		GLushort indices[] = { 0, 1, 2, 0, 2, 3 };
 
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), vVertices);
+		// Load the texture coordinate
 		glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), &vVertices[3]);
 
 		glEnableVertexAttribArray(0);
 		glEnableVertexAttribArray(1);
 
+		// Bind the texture
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, mTexId[1]);
 
+		// Set the sampler texture unit to 0
 		GLuint samplerLoc = glGetUniformLocation(mDefaultProgram, "s_texture");
 		glUniform1i(samplerLoc, 0);
 

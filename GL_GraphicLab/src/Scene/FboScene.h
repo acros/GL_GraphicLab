@@ -23,12 +23,14 @@ public:
 
 protected:
 
-	void renderToTexture();
+	void drawDepthTexture();
 
 protected:
+	GLuint		mDefaultProgram;
 
-// 	GLuint		mFbo;
-// 	GLuint		mRbo;
+	bool		mRenderToTexture;
+	GLuint		mFbo;
+	GLuint		mTexId[2];
 
 	float		mCameraMoveTime;
 

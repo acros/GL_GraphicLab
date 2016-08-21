@@ -17,7 +17,7 @@
     <Filter Include="src\Camera">
       <UniqueIdentifier>{b3f1a353-8d5d-49db-bd62-3c5a079e8141}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Base">
+    <Filter Include="src\AcBase">
       <UniqueIdentifier>{c2d0d74d-1196-400c-8c26-0c9b3a23022f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -62,13 +62,13 @@
       <Filter>src\Render</Filter>
     </ClCompile>
     <ClCompile Include="src\Base\AcObject.cpp">
-      <Filter>src\Base</Filter>
+      <Filter>src\AcBase</Filter>
     </ClCompile>
     <ClCompile Include="src\Render\Material.cpp">
       <Filter>src\Render</Filter>
     </ClCompile>
     <ClCompile Include="src\Base\Math.cpp">
-      <Filter>src\Base</Filter>
+      <Filter>src\AcBase</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -103,13 +103,13 @@
       <Filter>src\Render</Filter>
     </ClInclude>
     <ClInclude Include="src\Base\AcObject.h">
-      <Filter>src\Base</Filter>
+      <Filter>src\AcBase</Filter>
     </ClInclude>
     <ClInclude Include="src\Render\Material.h">
       <Filter>src\Render</Filter>
     </ClInclude>
     <ClInclude Include="src\Base\Math.h">
-      <Filter>src\Base</Filter>
+      <Filter>src\AcBase</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

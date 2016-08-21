@@ -81,18 +81,16 @@ void Mesh::draw(Renderer& context,const AcMatrix& mat)
 	glVertexAttribPointer(POSTITION_LOC, 3, GL_FLOAT, GL_FALSE, (3 /*+ 2*/) * sizeof(GLfloat), (const void*)NULL);	//Pure position vertex array
 
 	if (mShape == ST_Cube)
-		glVertexAttrib4f(COLOR_LOC, 1.0f, 0.0f, 0.0f, 1.0f);		//Set the color to a Const value
+		glVertexAttrib4f(COLOR_LOC, 0.8f, 0.8f, 0.0f, 1.0f);		//Set the color to a Const value
 	else if (mShape == ST_Plane)
-	{
 		glVertexAttrib4f(COLOR_LOC, 0.7f, 0.7f, 0.7f, 1.0f);	
-	}
 
 	glUniformMatrix4fv(mMaterial->mMvpLoc, 1, GL_FALSE, (GLfloat*)&(mat.m[0][0]));
 
 	glDrawElements(GL_TRIANGLES, indexSize, GL_UNSIGNED_INT, 0);
 
 	glDisableVertexAttribArray(POSTITION_LOC);	// Pos
-//	glDisableVertexAttribArray(COLOR_LOC);	// Color
+	glDisableVertexAttribArray(COLOR_LOC);	// Color
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);

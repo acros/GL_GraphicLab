@@ -42,6 +42,7 @@
 //  Includes
 //
 #include <stdlib.h>
+#include <cassert>
 
 #ifdef __APPLE__
 #include <OpenGLES/ES3/gl.h>

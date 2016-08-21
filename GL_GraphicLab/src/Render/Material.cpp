@@ -6,7 +6,7 @@ void Material::loadShader(Renderer& context,const string& vert, const string& fr
 		"#version 300 es                                   \n"
 		"uniform mat4 u_mvpMatrix;                         \n"
 		"layout(location = 0) in vec4 a_position;          \n"
-		"layout(location = 1) in vec4 a_color;             \n"
+		"layout(location = 1) in vec4 a_color;             \n"			//TODO: use texCoord here
 		"out vec4 v_color;                                 \n"
 		"													\n"
 		"void main()                                       \n"
