@@ -121,6 +121,7 @@
     <ClCompile Include="src\Scene\Scene.cpp" />
     <ClCompile Include="src\Scene\TextureScene.cpp" />
     <ClCompile Include="src\Scene\TriangleScene.cpp" />
+    <ClCompile Include="src\Scene\VertexScene.cpp" />
     <ClCompile Include="win_main.cpp" />
     <ClCompile Include="src\esInterface.cpp" />
     <ClCompile Include="src\esMain.cpp" />
@@ -133,6 +134,7 @@
     <ClInclude Include="src\Scene\Scene.hpp" />
     <ClInclude Include="src\Scene\TextureScene.h" />
     <ClInclude Include="src\Scene\TriangleScene.h" />
+    <ClInclude Include="src\Scene\VertexScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

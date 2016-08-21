@@ -234,6 +234,8 @@ GLboolean ESUTIL_API esCreateWindow(ESContext *esContext, const char *title, GLi
 	EGLConfig config;
 	EGLint majorVersion;
 	EGLint minorVersion;
+
+	//OpenGL ES version 3.0 ,  set to 2 for 2.0
 	EGLint contextAttribs[] = { EGL_CONTEXT_CLIENT_VERSION, 3, EGL_NONE };
 
 	if (esContext == NULL)

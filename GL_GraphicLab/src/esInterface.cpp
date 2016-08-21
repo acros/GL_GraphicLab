@@ -12,12 +12,14 @@
 
 #include "Scene/TextureScene.h"
 #include "Scene/TriangleScene.h"
+#include "Scene/VertexScene.h"
+#include "Scene/FboScene.h"
 
 EsInterface::EsInterface()
 {
 //	mScene = new TriangleScene(mRenderer);
-	mScene = new TextureScene(mRenderer);
-
+//	mScene = new TextureScene(mRenderer);
+	mScene = new VertexScene(mRenderer);
 }
 
 EsInterface::~EsInterface()

@@ -40,6 +40,9 @@
     <ClCompile Include="src\Scene\FboScene.cpp">
       <Filter>src\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="src\Scene\VertexScene.cpp">
+      <Filter>src\Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\esInterface.hpp">
@@ -61,6 +64,9 @@
       <Filter>src\Scene</Filter>
     </ClInclude>
     <ClInclude Include="src\Scene\TriangleScene.h">
+      <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene\VertexScene.h">
       <Filter>src\Scene</Filter>
     </ClInclude>
   </ItemGroup>
