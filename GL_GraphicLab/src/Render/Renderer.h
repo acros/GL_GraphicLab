@@ -15,8 +15,6 @@ public:
 	void	setViewport(int width,int height);
 	GLuint	loadShaderProgram(const string& vertStr,const string& fragStr);
 
-	GLuint	createSimpleTexture2D();
-
 	void	beginDraw();
 
 	void	draw();

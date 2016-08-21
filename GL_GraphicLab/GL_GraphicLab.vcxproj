@@ -116,6 +116,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Base\AcObject.cpp" />
+    <ClCompile Include="src\Camera\Camera.cpp" />
+    <ClCompile Include="src\esShapes.cpp" />
+    <ClCompile Include="src\esTransform.cpp" />
+    <ClCompile Include="src\Render\Material.cpp" />
+    <ClCompile Include="src\Render\Mesh.cpp" />
     <ClCompile Include="src\Render\Renderer.cpp" />
     <ClCompile Include="src\Scene\FboScene.cpp" />
     <ClCompile Include="src\Scene\Scene.cpp" />
@@ -127,8 +133,13 @@
     <ClCompile Include="src\esMain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Base\AcObject.h" />
+    <ClInclude Include="src\Base\Math.h" />
+    <ClInclude Include="src\Camera\Camera.h" />
     <ClInclude Include="src\esInterface.hpp" />
     <ClInclude Include="src\esUtil.h" />
+    <ClInclude Include="src\Render\Material.h" />
+    <ClInclude Include="src\Render\Mesh.h" />
     <ClInclude Include="src\Render\Renderer.h" />
     <ClInclude Include="src\Scene\FboScene.h" />
     <ClInclude Include="src\Scene\Scene.hpp" />

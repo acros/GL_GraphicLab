@@ -2,6 +2,9 @@
 
 #include "Scene.hpp"
 
+/*
+	Basic Example
+*/
 class TriangleScene : public Scene
 {
 public:

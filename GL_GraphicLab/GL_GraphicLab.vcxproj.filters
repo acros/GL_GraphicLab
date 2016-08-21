@@ -14,6 +14,12 @@
     <Filter Include="src\Render">
       <UniqueIdentifier>{3ab34b05-2882-4374-a32e-575244cdd694}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Camera">
+      <UniqueIdentifier>{b3f1a353-8d5d-49db-bd62-3c5a079e8141}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Base">
+      <UniqueIdentifier>{c2d0d74d-1196-400c-8c26-0c9b3a23022f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\esInterface.cpp">
@@ -43,6 +49,24 @@
     <ClCompile Include="src\Scene\VertexScene.cpp">
       <Filter>src\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="src\esShapes.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Camera\Camera.cpp">
+      <Filter>src\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="src\esTransform.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Render\Mesh.cpp">
+      <Filter>src\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Base\AcObject.cpp">
+      <Filter>src\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Render\Material.cpp">
+      <Filter>src\Render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\esInterface.hpp">
@@ -68,6 +92,21 @@
     </ClInclude>
     <ClInclude Include="src\Scene\VertexScene.h">
       <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Camera\Camera.h">
+      <Filter>src\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Render\Mesh.h">
+      <Filter>src\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Base\AcObject.h">
+      <Filter>src\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Render\Material.h">
+      <Filter>src\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Base\Math.h">
+      <Filter>src\Base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

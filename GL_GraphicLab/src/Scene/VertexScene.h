@@ -2,6 +2,10 @@
 
 #include "Scene.hpp"
 
+/*
+	Vertex Draw
+	Example for VAO VBO
+*/
 class VertexScene : public Scene
 {
 public:

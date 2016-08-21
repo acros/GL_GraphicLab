@@ -19,7 +19,9 @@ EsInterface::EsInterface()
 {
 //	mScene = new TriangleScene(mRenderer);
 //	mScene = new TextureScene(mRenderer);
-	mScene = new VertexScene(mRenderer);
+//	mScene = new VertexScene(mRenderer);
+
+	mScene = new FboScene(mRenderer);
 }
 
 EsInterface::~EsInterface()
@@ -43,6 +45,7 @@ int EsInterface::init(ESContext *esContext)
 void EsInterface::update(float delta)
 {
  //   logMessage("Update called.");
+	mScene->update(delta);
 }
 
 void EsInterface::draw ()

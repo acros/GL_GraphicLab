@@ -275,7 +275,7 @@ void ESUTIL_API esOrtho ( ESMatrix *result, float left, float right, float botto
 /// \param result Returns multiplied matrix
 /// \param srcA, srcB Input matrices to be multiplied
 //
-void ESUTIL_API esMatrixMultiply ( ESMatrix *result, ESMatrix *srcA, ESMatrix *srcB );
+void ESUTIL_API esMatrixMultiply ( ESMatrix *result, const ESMatrix *srcA,const ESMatrix *srcB );
 
 //
 //// \brief return an indentity matrix
