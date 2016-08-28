@@ -81,7 +81,7 @@ void Mesh::draw(Renderer& context,const AcMatrix& mat)
 	glVertexAttribPointer(POSTITION_LOC, 3, GL_FLOAT, GL_FALSE, (3 /*+ 2*/) * sizeof(GLfloat), (const void*)NULL);	//Pure position vertex array
 
 	if (mShape == ST_Cube)
-		glVertexAttrib4f(COLOR_LOC, 0.8f, 0.8f, 0.0f, 1.0f);		//Set the color to a Const value
+		glVertexAttrib4f(COLOR_LOC, 0.8f, 0.6f, 0.0f, 1.0f);		//Set the color to a Const value
 	else if (mShape == ST_Plane)
 		glVertexAttrib4f(COLOR_LOC, 0.7f, 0.7f, 0.7f, 1.0f);	
 

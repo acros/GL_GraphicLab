@@ -14,14 +14,19 @@
 #include "Scene/TriangleScene.h"
 #include "Scene/VertexScene.h"
 #include "Scene/FboScene.h"
+#include "Scene/LightScene.h"
+#include "Scene/ParticleScene.h"
 
 EsInterface::EsInterface()
 {
 //	mScene = new TriangleScene(mRenderer);
 //	mScene = new TextureScene(mRenderer);
 //	mScene = new VertexScene(mRenderer);
+//	mScene = new FboScene(mRenderer);
 
-	mScene = new FboScene(mRenderer);
+//	mScene = new LightScene(mRenderer);
+
+	mScene = new ParticleScene(mRenderer);
 }
 
 EsInterface::~EsInterface()

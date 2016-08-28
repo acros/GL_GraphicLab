@@ -18,7 +18,10 @@ Scene::Scene(Renderer& render)
 
 Scene::~Scene()
 {
-
+	if (mShaderProgram != 0)
+	{
+		glDeleteProgram(mShaderProgram);
+	}
 }
 
 void Scene::enter()

@@ -20,6 +20,9 @@
     <Filter Include="src\AcBase">
       <UniqueIdentifier>{c2d0d74d-1196-400c-8c26-0c9b3a23022f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Scene\AdvancedScene">
+      <UniqueIdentifier>{c51928ac-fead-4e67-8acc-e7a9c56e7098}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\esInterface.cpp">
@@ -41,9 +44,6 @@
       <Filter>src\Scene</Filter>
     </ClCompile>
     <ClCompile Include="src\Scene\TriangleScene.cpp">
-      <Filter>src\Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Scene\FboScene.cpp">
       <Filter>src\Scene</Filter>
     </ClCompile>
     <ClCompile Include="src\Scene\VertexScene.cpp">
@@ -70,6 +70,15 @@
     <ClCompile Include="src\Base\Math.cpp">
       <Filter>src\AcBase</Filter>
     </ClCompile>
+    <ClCompile Include="src\Scene\ParticleScene.cpp">
+      <Filter>src\Scene\AdvancedScene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene\LightScene.cpp">
+      <Filter>src\Scene\AdvancedScene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene\FboScene.cpp">
+      <Filter>src\Scene\AdvancedScene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\esInterface.hpp">
@@ -86,9 +95,6 @@
     </ClInclude>
     <ClInclude Include="src\Render\Renderer.h">
       <Filter>src\Render</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Scene\FboScene.h">
-      <Filter>src\Scene</Filter>
     </ClInclude>
     <ClInclude Include="src\Scene\TriangleScene.h">
       <Filter>src\Scene</Filter>
@@ -110,6 +116,15 @@
     </ClInclude>
     <ClInclude Include="src\Base\Math.h">
       <Filter>src\AcBase</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene\ParticleScene.h">
+      <Filter>src\Scene\AdvancedScene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene\LightScene.h">
+      <Filter>src\Scene\AdvancedScene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene\FboScene.h">
+      <Filter>src\Scene\AdvancedScene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
